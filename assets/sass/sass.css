@@ -1,1 +1,603 @@
-/* No CSS *//*# sourceMappingURL=sass.css.map */
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Cookie|Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700|PT+Sans:400,400i,700,700i|Pacifico|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i|Varela+Round|Quicksand:300,400,500,700");
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  background-color: #fff;
+  color: #545A70;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 15px;
+  font-weight: 500;
+  font-family: "Quicksand", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input, select, option {
+  border: 0;
+  font-size: 0.75em;
+  color: #8A9CB2;
+  font-weight: 500;
+}
+
+input.placeholder, select.placeholder, option.placeholder {
+  color: #8A9CB2;
+}
+
+input:-moz-placeholder, select:-moz-placeholder, option:-moz-placeholder {
+  color: #8A9CB2;
+}
+
+input::-moz-placeholder, select::-moz-placeholder, option::-moz-placeholder {
+  color: #8A9CB2;
+}
+
+input:-ms-input-placeholder, select:-ms-input-placeholder, option:-ms-input-placeholder {
+  color: #8A9CB2;
+}
+
+input::-webkit-input-placeholder, select::-webkit-input-placeholder, option::-webkit-input-placeholder {
+  color: #8A9CB2;
+}
+
+i {
+  color: #8A9CB2;
+  font-size: 0.9em;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 0 solid;
+}
+
+#journals {
+  height: 100vh;
+}
+
+#journals .container-fluid {
+  padding: 0;
+}
+
+#journals .j-left-bar {
+  border-right: 1px solid #DCE0EC;
+}
+
+#journals .j-left-bar .j-search-box {
+  position: relative;
+  border-bottom: 1px solid #DCE0EC;
+  height: 50px;
+}
+
+#journals .j-left-bar .j-search-box i {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  color: #8A9CB2;
+  font-size: 0.9em;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#journals .j-left-bar .j-search-box input {
+  border: 0px solid #DCE0EC;
+  padding: 8px;
+  padding-left: 50px;
+  font-size: 0.9em;
+  width: 100%;
+  height: 100%;
+}
+
+#journals .j-left-bar .j-search-box input.placeholder {
+  color: #8A9CB2;
+}
+
+#journals .j-left-bar .j-search-box input:-moz-placeholder {
+  color: #8A9CB2;
+}
+
+#journals .j-left-bar .j-search-box input::-moz-placeholder {
+  color: #8A9CB2;
+}
+
+#journals .j-left-bar .j-search-box input:-ms-input-placeholder {
+  color: #8A9CB2;
+}
+
+#journals .j-left-bar .j-search-box input::-webkit-input-placeholder {
+  color: #8A9CB2;
+}
+
+#journals .j-left-bar .j-category {
+  padding: 30px;
+}
+
+#journals .j-left-bar .j-category .j-cat-items {
+  border-bottom: 1px solid #DCE0EC;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#journals .j-left-bar .j-category .j-cat-items li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-bottom: 8px;
+  z-index: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+1):hover:before, #journals .j-left-bar .j-category .j-cat-items li.active:nth-child(7n+1):before, #journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+1):after {
+  background-color: #f896c3;
+}
+
+#journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+2):hover:before, #journals .j-left-bar .j-category .j-cat-items li.active:nth-child(7n+2):before, #journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+2):after {
+  background-color: #8bc4ea;
+}
+
+#journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+3):hover:before, #journals .j-left-bar .j-category .j-cat-items li.active:nth-child(7n+3):before, #journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+3):after {
+  background-color: #7ee2a8;
+}
+
+#journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+4):hover:before, #journals .j-left-bar .j-category .j-cat-items li.active:nth-child(7n+4):before, #journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+4):after {
+  background-color: #507192;
+}
+
+#journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+5):hover:before, #journals .j-left-bar .j-category .j-cat-items li.active:nth-child(7n+5):before, #journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+5):after {
+  background-color: #c6a0d5;
+}
+
+#journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+6):hover:before, #journals .j-left-bar .j-category .j-cat-items li.active:nth-child(7n+6):before, #journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+6):after {
+  background-color: #f29f97;
+}
+
+#journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+7):hover:before, #journals .j-left-bar .j-category .j-cat-items li.active:nth-child(7n+7):before, #journals .j-left-bar .j-category .j-cat-items li:nth-child(7n+7):after {
+  background-color: #f7dc6f;
+}
+
+#journals .j-left-bar .j-category .j-cat-items li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  top: 4px;
+  left: 3px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#journals .j-left-bar .j-category .j-cat-items li:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 1px;
+  top: 2px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+#journals .j-left-bar .j-category .j-cat-add {
+  margin-top: 10px;
+  color: #8A9CB2;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#journals .j-left-bar .j-category .j-cat-add i {
+  margin-right: 5px;
+}
+
+#journals .j-left-bar .j-category .j-cat-add span {
+  font-weight: 500;
+}
+
+#journals .j-log-bar {
+  border-right: 1px solid #DCE0EC;
+}
+
+#journals .j-log-bar .j-sort {
+  height: 50px;
+  border-bottom: 1px solid #DCE0EC;
+}
+
+#journals .j-log-bar .j-sort .select_mate {
+  font-family: "Varela Round", sans-serif;
+  font-size: 0.9em;
+  color: #8A9CB2;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+#journals .j-log-bar .j-sort .select_mate:first-nth {
+  border-right: 1px solid #DCE0EC;
+}
+
+#journals .j-log-bar .j-sort .select_mate p {
+  font-family: "Varela Round", sans-serif;
+  font-size: 0.9em;
+  color: #8A9CB2;
+  font-weight: 500;
+  line-height: 1.5;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#journals .j-log-bar .j-sort .select_mate .icon_select_mate {
+  top: 12px;
+}
+
+#journals .j-log-bar .j-logs {
+  overflow-y: scroll;
+  height: 75%;
+}
+
+#journals .j-log-bar .j-logs::-webkit-scrollbar {
+  width: 5px;
+}
+
+#journals .j-log-bar .j-logs::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+#journals .j-log-bar .j-logs::-webkit-scrollbar-thumb {
+  background: #DCE0EC;
+}
+
+#journals .j-log-bar .j-logs::-webkit-scrollbar-thumb:hover {
+  background: #bbc3da;
+}
+
+#journals .j-log-bar .j-logs .month-year {
+  border-bottom: 1px solid #DCE0EC;
+  padding: 1px 16px;
+  display: block;
+}
+
+#journals .j-log-bar .j-logs .month-year span {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.75em;
+  color: #545A70;
+  font-weight: 500;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+#journals .j-log-bar .j-logs .single-log {
+  position: relative;
+  border-bottom: 1px solid #DCE0EC;
+  padding: 12px 0;
+  -webkit-box-shadow: inset -3px 0px 5px -3px #aaa;
+          box-shadow: inset -3px 0px 5px -3px #aaa;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#journals .j-log-bar .j-logs .single-log.active, #journals .j-log-bar .j-logs .single-log:hover {
+  background-color: #E8EFF7;
+}
+
+#journals .j-log-bar .j-logs .single-log .log-date {
+  position: absolute;
+  text-align: center;
+  left: 5px;
+  width: 60px;
+  color: #8A9CB2;
+}
+
+#journals .j-log-bar .j-logs .single-log .log-date:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 80%;
+  width: 1px;
+  background-color: #DCE0EC;
+  right: -8px;
+  top: -15px;
+}
+
+#journals .j-log-bar .j-logs .single-log .log-date .date {
+  display: block;
+  font-size: 1.563em;
+  font-weight: 500;
+}
+
+#journals .j-log-bar .j-logs .single-log .log-date .day {
+  font-size: 0.75em;
+  font-weight: 500;
+}
+
+#journals .j-log-bar .j-logs .single-log .log-prev {
+  padding-left: 85px;
+  padding-right: 10px;
+}
+
+#journals .j-log-bar .j-logs .single-log .log-prev h5 {
+  font-size: 1em;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#journals .j-log-bar .j-logs .single-log .log-prev p {
+  font-size: 0.8em;
+  height: 3.4em;
+  line-height: 1.7;
+  overflow: hidden;
+  margin-bottom: 0;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+#journals .j-log-bar .j-logs .single-log .circle-mark {
+  margin-left: 85px;
+  margin-top: 3px;
+}
+
+#journals .j-log-bar .j-logs .single-log .circle-mark span {
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  border: 2px solid;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+#journals .j-log-bar .j-logs .single-log .circle-mark span:nth-child(7n+1) {
+  border-color: #f896c3;
+}
+
+#journals .j-log-bar .j-logs .single-log .circle-mark span:nth-child(7n+2) {
+  border-color: #8bc4ea;
+}
+
+#journals .j-log-bar .j-logs .single-log .circle-mark span:nth-child(7n+3) {
+  border-color: #7ee2a8;
+}
+
+#journals .j-log-bar .j-logs .single-log .circle-mark span:nth-child(7n+4) {
+  border-color: #507192;
+}
+
+#journals .j-log-bar .j-logs .single-log .circle-mark span:nth-child(7n+5) {
+  border-color: #c6a0d5;
+}
+
+#journals .j-log-bar .j-logs .single-log .circle-mark span:nth-child(7n+6) {
+  border-color: #f29f97;
+}
+
+#journals .j-log-bar .j-logs .single-log .circle-mark span:nth-child(7n+7) {
+  border-color: #f7dc6f;
+}
+
+#journals .j-creator .top-bar {
+  height: 50px;
+  border-bottom: 1px solid #DCE0EC;
+  padding-left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+#journals .j-creator .top-bar > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+}
+
+#journals .j-creator .top-bar i {
+  cursor: pointer;
+  display: inline-block;
+  -webkit-transition: .3s;
+  transition: .3s;
+  padding: 20px;
+  margin-left: 1px;
+  color: #8A9CB2;
+  font-size: 1em;
+}
+
+#journals .j-creator .top-bar i.add {
+  background-color: #7F7EFE;
+  color: #f4f4f4;
+  margin-left: 15px;
+}
+
+#journals .j-creator .top-bar i.add:hover {
+  font-size: 1.25em;
+  background-color: #7F7EFE;
+  color: #f4f4f4;
+}
+
+#journals .j-creator .top-bar i:hover {
+  background-color: #E8EFF7;
+}
+
+#journals .j-creator .journal-read {
+  padding-left: 70px;
+  padding-top: 40px;
+  padding-right: 50px;
+}
+
+#journals .j-creator .journal-read .j-created-date {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9em;
+  color: #8A9CB2;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+#journals .j-creator .journal-read h2 {
+  font-size: 1.953em;
+  margin-bottom: 30px;
+}
+
+#journals .j-editor .top-bar {
+  padding-left: 20px;
+}
+
+#journals .j-editor .top-bar .header-text input {
+  width: 350px;
+  padding: 14px;
+}
+
+#journals .j-editor .text-edit-bar {
+  border-bottom: 1px solid #DCE0EC;
+  height: 50px;
+}
+
+#journals .j-editor .text-edit-bar div {
+  display: inline-block;
+}
+
+#journals .j-editor .text-edit-bar .icons i {
+  padding: 5px 3px;
+  width: 45px;
+  height: 49px;
+  margin-left: -2px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 40px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#journals .j-editor .text-edit-bar .icons i:hover, #journals .j-editor .text-edit-bar .icons i.active {
+  background-color: #E8EFF7;
+}
+
+#journals .j-editor .text-edit-bar .number-input {
+  position: relative;
+  width: 64px;
+  height: 47px;
+  display: inline-block;
+}
+
+#journals .j-editor .text-edit-bar .number-input input {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  border: 0;
+  padding: 5px;
+  text-align: center;
+  height: 100%;
+  font-weight: 500;
+}
+
+#journals .j-editor .text-edit-bar .number-input input::-webkit-inner-spin-button, #journals .j-editor .text-edit-bar .number-input input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+#journals .j-editor .text-edit-bar .number-input button {
+  background: none;
+  border: none;
+  width: 18px;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  right: 0px;
+}
+
+#journals .j-editor .text-edit-bar .number-input button:nth-child(2) {
+  top: 0px;
+  bottom: auto;
+}
+
+#journals .j-editor .text-edit-bar .number-input button i {
+  padding: 0 !important;
+  width: auto !important;
+  margin-left: -3px !important;
+  background-color: #fff !important;
+  text-align: center;
+  font-size: 12px;
+  display: block;
+  line-height: 22px;
+}
+
+#journals .j-editor .text-edit-bar .select_mate {
+  float: none;
+  width: 20%;
+}
+
+#journals .j-editor .text-edit-bar .select_mate li {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.75em;
+  color: #8A9CB2;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+#journals .j-editor .text-edit-bar .select_mate p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9em;
+  color: #8A9CB2;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+#journals .j-editor .text-edit-bar .select_mate .icon_select_mate {
+  top: 9px;
+}
+/*# sourceMappingURL=sass.css.map */

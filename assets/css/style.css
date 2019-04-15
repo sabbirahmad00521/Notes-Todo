@@ -1,60 +1,193 @@
-/* Common Styles
-================*/
-@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Cookie|Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700|PT+Sans:400,400i,700,700i|Pacifico|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i|Varela+Round');
+/* =================
+====================
+===DROPDOWN STYLE===
+====================
+==================== */
 
-/*
-font-family: 'Roboto Slab', serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Fira Sans', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Source Sans Pro', sans-serif;
-font-family: 'PT Sans', sans-serif;
-font-family: 'Lato', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Varela Round', sans-serif;
-font-family: 'Pacifico', cursive;
-font-family: 'Oswald', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Bree Serif', serif;
-font-family: 'Cookie', cursive;
-*/
-
-body {
-   font-family: 'Bree Serif', serif;
-   font-size: 16px;
+/* ///  DECORATION CSS ///  */
+.cont_select_center {
+   position: absolute;
+   left: 20%;
+   top: 20%;
+   margin-top: -30px;
+   margin-left: -150px;
+ }
+ 
+ /* ///  END DECORATION CSS  ///  */
+ .icon_select_mate {
+   position: absolute;
+   top: 6px;
+   right: 12px;
+   height: 22px;
+   transition: all 275ms;
+ }
+ 
+ .select_mate {
+   position: relative;
+   float: left;
+   width:100%;
    background-color: #fff;
-   color: #333;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   margin: 0 0 15px;
-   font-weight: 700;
-}
-
-a,
-a:hover,
-a:focus,
-a:active,
-a:hover,
-a:visited {
-   text-decoration: none;
-   color: #333;
-}
-
-img {
-   max-width: 100%;
-   height: auto;
+   transition: all 375ms ease-in-out;
+   /* Oculto el elemento select */
+ }
+ .select_mate select {
+   position: absolute;
+   overflow: hidden;
+   height: 0px;
+   opacity: 0;
+   z-index: -1;
+   text-transform: uppercase;
+ }
+ 
+ .cont_list_select_mate {
+   position: relative;
+   float: left;
+   width: 100%;
+ }
+ 
+ .cont_select_int {
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   z-index: 999;
+   overflow: hidden;
+   height: 100%;
+   width: 100%;
+   background-color: #fff;
+   padding: 0px;
+   margin-bottom: 0px;
+   margin-top: 0px;
+   transition: all 375ms ease-in-out;
+   
+ }
+ .cont_select_int li {
+   position: relative;
+   float: left;
+   width: 100%;
+   font-size: 0.84em;
+   list-style-type: none;
+   padding: 10px 18px;
+   margin: 0px;
+   transition: all 275ms ease-in-out;
    display: block;
+   cursor: pointer;
+   border-left: 1px solid #dedede;
+   border-right: 1px solid #dedede;   
+ }
+ .cont_select_int li:last-child {
+   border-radius: 3px;
+   border-bottom: 1px solid #dedede;
+ }
+ .cont_select_int li:hover {
+   background-color: #e8eff7;
+ }
+ .cont_select_int .active {
+   background-color: #e8eff7;
+ }
+ .icon_select_mate{
+    cursor: pointer;
+ }
+ /* etiqueta <p> con la opcion selecionada  */
+ .selecionado_opcion {
+   padding: 12px 8px 12px 16px;
+   width: 100%;
+   display: block;
+   margin: 0px;
+   cursor: pointer;
+ }
+
+
+ /* =================
+====================
+====NUMBER STYLE====
+====================
+==================== */
+/* input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+} */
 
-input:focus,
-textarea:focus,
-button:focus {
-   outline: 0 solid;
+.number-input {
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 52px;
+  width: 107px; */
+}
+
+/* .number-input,
+.number-input * {
+  box-sizing: border-box;
+} */
+/* 
+.number-input button {
+  outline: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 18px;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  border: 1px solid #ddd;
+  display: block;
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0 4px 0 0;
+  left: -18px;
+}
+.number-input button.plus {
+  border-bottom: 1px solid #ddd;
+  border-radius: 0 0 4px 0;
+}
+
+.number-input button:before,
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 0.3em;
+  height: 1px;
+  left: 10px;
+  background-color: #b9babb;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.number-input button:before {
+  left: 7px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.number-input button.plus:before,
+.number-input button.plus:after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 0.3em;
+  height: 1px;
+  left: 7px;
+  background-color: #b9babb;
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.number-input button.plus:before {
+  left: 10px;
+  transform: translate(-50%, -50%) rotate(135deg);
+} */
+
+.number-input input[type=number] {
+  /* max-width: 50px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px 0 0 4px; */
 }

@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Cookie|Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700|PT+Sans:400,400i,700,700i|Pacifico|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i|Varela+Round|Quicksand:300,400,500,700');
+    
 //COLORS
 $bg: #f4f4f4 // background color
 $ntc: #545A70 // normal text color
 $fac: #8A9CB2 // font awesome color
 $bdc: #DCE0EC  // border color
+$ahc: #E8EFF7 //active hover color
 
 //less uesd colors
 $pink: #F2368D
@@ -21,7 +24,8 @@ $mn: 0 // margin 0
 $margin: 15px
 
 //font sizes
-$f0: 0.8em 
+$fsm: 0.75em 
+$f0: 0.9em 
 $f1: 1em
 $f2: 1.25em
 $f3: 1.563em
@@ -29,24 +33,415 @@ $f4: 1.953em
 $f5: 2.441em 
 $f6: 3.052em 
 
+//font family
+$ff1: 'Roboto Slab', serif
+$ff2: 'Roboto', sans-serif;
+$ff3: 'Fira Sans', sans-serif;
+$ff4: 'Open Sans', sans-serif;
+$ff5: 'Source Sans Pro', sans-serif;
+$ff6: 'PT Sans', sans-serif;
+$ff7: 'Lato', sans-serif;
+$ff8: 'Montserrat', sans-serif;
+$ff9: 'Varela Round', sans-serif;
+$ff10: 'Pacifico', cursive;
+$ff11: 'Oswald', sans-serif;
+$ff12: 'Raleway', sans-serif;
+$ff13: 'Bree Serif', serif;
+$ff14: 'Cookie', cursive;
+$ff15: 'Quicksand', sans-serif;
+
 //mixin
-=pseudo($display: block, $pos: absolute, $content: '', $background: $bg)
+=pseudo($display: block, $pos: absolute, $content: '')
     content: $content
     display: $display
     position: $pos
-    background-color: $background
 
-=font($size: $f1, $colour: $ntc, $weight: 300,  $lh: 1.2) 
-    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif
-    font-size: $size
-    color: $colour;
-    font-weight: $weight
+=font($fz: $f1, $tc: $ntc, $ff: $ff15, $fwg: 500,  $lh: 1.5) 
+    font-family: $ff
+    font-size: $fz
+    color: $tc;
+    font-weight: $fwg
     line-height: $lh
 
-
-=box($margin: $mn, $padding: $default-padding, $border-radious: $default-border-radious )
+=box($m: $mn, $p: $default-padding, $bdrs: $default-border-radious )
     background: #fff;
     box-shadow: 0 6px 8px rgba(102,119,136,.03), 0 1px 2px rgba(102,119,136,.3)
-    border-radius: $border-radious
-    padding: $padding
-    margin: $margin
+    border-radius: $bdrs
+    padding: $p
+    margin: $m
+
+=input($pl: 30px, $width: 100%,$border: 1px)
+    border: $border solid $bdc
+    padding: 8px
+    padding-left: $pl
+    font-size: $f0
+    width: $width
+        
+=list 
+    margin: 0
+    padding: 0
+    list-style: none
+
+@mixin placeholder($color: $fac) 
+    &.placeholder
+        color: $color
+    &:-moz-placeholder
+        color: $color
+    &::-moz-placeholder 
+        color: $color
+    &:-ms-input-placeholder 
+        color: $color
+    &::-webkit-input-placeholder 
+        color: $color
+
+
+// default style
+body 
+   font-family: $ff15
+   font-size: $f1
+   background-color: #fff
+   color: $ntc
+   overflow: hidden
+   height: 100%
+   width: 100%
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 
+   margin: 0 0 15px
+   font-weight: 500
+   font-family: $ff15
+
+p
+    font-family: $ff4
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:hover,
+a:visited 
+   text-decoration: none
+   color: #333
+
+img 
+   max-width: 100%
+   height: auto
+   display: block
+
+input,select,option
+    border: 0
+    font-size: $fsm
+    color: $fac
+    font-weight: 500
+    +placeholder
+
+i
+    color: $fac
+    font-size: $f0
+
+input:focus,
+textarea:focus,
+button:focus 
+   outline: 0 solid
+
+//journal page
+
+#journals
+    height: 100vh 
+    .container-fluid
+        padding: 0
+    .j-left-bar
+        border-right: 1px solid $bdc
+        .j-search-box
+            position: relative
+            border-bottom: 1px solid $bdc
+            height: 50px
+            i 
+                position: absolute
+                top: 50%
+                left: 30px
+                color: $fac
+                font-size: $f0
+                transform: translateY(-50%)
+            input
+                +input(50px,100%, 0px)
+                +placeholder()
+                height: 100%
+                    
+                   
+        .j-category
+            padding: 30px
+            .j-cat-items
+                border-bottom: 1px solid $bdc
+                +list
+
+                li 
+                    position: relative
+                    padding-left: 30px
+                    font-size: $f0
+                    font-weight: 500
+                    margin-bottom: 8px
+                    z-index: 1
+                    cursor: pointer
+                    white-space: nowrap
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    $backgrounds: #F2368D, #3498db, #2ecc71, #2c3e50,  #9b59b6,  #e74c3c, #f1c40f;
+                    @for $i from 1 through length($backgrounds) 
+                        &:nth-child(#{length($backgrounds)}n+#{$i}):hover:before,
+                        &.active:nth-child(#{length($backgrounds)}n+#{$i}):before,
+                        &:nth-child(#{length($backgrounds)}n+#{$i}):after
+                            background-color: lighten(nth($backgrounds, $i), 20%); 
+                    &:before
+                        +pseudo
+                        height: 12px
+                        width: 12px
+                        top: 4px
+                        left: 3px
+                        border-radius: 50%
+                        border: 2px solid #fff
+                        background: #fff
+                        transition: .4s
+
+                li:after
+                    +pseudo
+                    height: 16px
+                    width: 16px
+                    left: 1px
+                    top: 2px
+                    border-radius: 50%
+                    z-index: -1
+                
+            .j-cat-add
+                margin-top: 10px
+                color: $fac
+                font-size: $f0
+                font-weight: 500
+                cursor: pointer
+                i 
+                    margin-right: 5px
+                span 
+                    font-weight: 500
+    .j-log-bar
+        border-right: 1px solid $bdc
+        .j-sort
+            height: 50px
+            border-bottom: 1px solid $bdc
+            .select_mate
+                +font($f0, $fac, $ff9, 500)
+                &:first-nth
+                    border-right: 1px solid $bdc
+                p
+                    +font($f0, $fac, $ff9, 500)
+                    height: 100%
+                    display: flex
+                    align-items: center
+                .icon_select_mate
+                    top: 12px 
+
+        .j-logs
+            overflow-y: scroll
+            height: 75% 
+            &::-webkit-scrollbar 
+                width: 5px
+            &::-webkit-scrollbar-track 
+                background: $bg
+            &::-webkit-scrollbar-thumb 
+                background: $bdc
+            &::-webkit-scrollbar-thumb:hover 
+                background: darken($bdc, 10%)
+            .month-year
+                border-bottom: 1px solid $bdc
+                padding: 1px 16px
+                display: block
+                span
+                    +font($fsm)
+                    opacity: 0.85
+            .single-log
+                position: relative
+                border-bottom: 1px solid $bdc
+                padding: 12px 0
+                box-shadow: inset -3px 0px 5px -3px #aaa
+                cursor: pointer
+                transition: .3s
+                &.active,&:hover
+                    background-color: $ahc
+                .log-date
+                    position: absolute
+                    text-align: center
+                    left: 5px
+                    width: 60px
+                    color: $fac
+                    &:after
+                        +pseudo
+                        height: 80%
+                        width: 1px
+                        background-color: $bdc
+                        right: -8px
+                        top: -15px
+                    .date
+                        display: block
+                        font-size: $f3
+                        font-weight: 500
+                    .day
+                        font-size: $fsm
+                        font-weight: 500
+                .log-prev
+                    padding-left: 85px
+                    padding-right: 10px
+                    h5
+                        font-size: $f1
+                        margin-bottom: 5px
+                        white-space: nowrap
+                        overflow: hidden
+                        text-overflow: ellipsis
+                    p
+                        font-size: $fsm + 0.05em
+                        height: 3.4em
+                        line-height: 1.7
+                        overflow: hidden
+                        margin-bottom: 0 
+                        display: block
+                        display: -webkit-box
+                        -webkit-line-clamp: 2
+                        -webkit-box-orient: vertical
+                        text-overflow: ellipsis 
+                .circle-mark
+                    margin-left: 85px
+                    margin-top: 3px 
+                    span 
+                        height: 15px
+                        width: 15px
+                        display: inline-block 
+                        border: 2px solid 
+                        border-radius: 50%
+                        margin-right: 5px
+                    $backgrounds: #F2368D, #3498db, #2ecc71, #2c3e50,  #9b59b6,  #e74c3c, #f1c40f;
+                    @for $i from 1 through length($backgrounds) 
+                        span:nth-child(#{length($backgrounds)}n+#{$i})
+                            border-color: lighten(nth($backgrounds, $i), 20%);
+
+    .j-creator
+        .top-bar
+            height: 50px
+            border-bottom: 1px solid $bdc
+            padding-left: 50px
+            display: flex
+            align-items: center 
+            justify-content: space-between
+            overflow: hidden
+            >div 
+                display: flex
+                align-items: center
+                height: 50px
+            i
+                cursor: pointer
+                display: inline-block
+                transition: .3s
+                padding: 20px 
+                margin-left: 1px
+                color: $fac
+                font-size: $f1
+                &.add
+                    background-color: #7F7EFE
+                    color: $bg
+                    margin-left: 15px
+                    &:hover
+                        font-size: $f2
+                        background-color: #7F7EFE
+                        color: $bg
+                &:hover
+                    background-color: $ahc
+
+        .journal-read
+            padding-left: 70px
+            padding-top: 40px
+            padding-right: 50px
+            .j-created-date
+                +font($f0, $fac)
+                margin-bottom: 10px 
+            h2 
+                font-size: $f4
+                margin-bottom: 30px
+
+
+
+    .j-editor 
+        .top-bar
+            padding-left: 20px
+            .header-text
+                input
+                    width: 350px
+                    padding: 14px
+        .text-edit-bar 
+            border-bottom: 1px solid $bdc
+            height: 50px
+            div
+                display: inline-block
+                // border-left: 1px solid $bdc
+                // padding: 0 5px
+            .icons
+                i 
+                    padding: 5px 3px
+                    width: 45px
+                    height: 49px
+                    margin-left: -2px
+                    text-align: center
+                    cursor: pointer 
+                    display: inline-block
+                    line-height: 40px
+                    transition: .4s
+                    &:hover, &.active
+                        background-color: $ahc
+
+            .number-input
+                position: relative
+                width: 64px
+                height: 47px
+                display: inline-block
+                input
+                    -webkit-appearance: textfield
+                    -moz-appearance: textfield
+                    appearance: textfield
+                    border: 0
+                    padding: 5px
+                    text-align: center
+                    height: 100%
+                    font-weight: 500
+                    &::-webkit-inner-spin-button,
+                    &::-webkit-outer-spin-button
+                        -webkit-appearance: none;
+                button
+                    background: none
+                    border: none
+                    width: 18px
+                    height: 25px
+                    position: absolute
+                    bottom: 0
+                    top: auto
+                    right: 0px
+                    &:nth-child(2)
+                        top: 0px
+                        bottom: auto
+                    i
+                        padding: 0 !important
+                        width: auto !important
+                        margin-left: -3px !important
+                        background-color: #fff !important
+                        text-align: center
+                        font-size: 12px
+                        display: block
+                        line-height: 22px
+            .select_mate
+                float: none
+                width: 20%
+                li 
+                    +font($fsm, $fac)
+                p
+                    +font($f0, $fac)
+                .icon_select_mate
+                    top: 9px 

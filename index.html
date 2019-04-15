@@ -21,7 +21,6 @@
    <link rel="stylesheet" href="assets/sass/sass.css">
    <link rel="stylesheet" href="assets/css/style.css">
    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
-   <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -31,16 +30,17 @@
    <!-- COMMENT: j mean Journal -->
    <div id="journals">
       <div class="container-fluid">
-         <div class="row">
+         <div class="row no-gutters">
             <div class="col-lg-2 j-left-bar">
                <div class="j-search-box">
                   <i class="fas fa-search"></i>
-                  <input type="search" name="j-search" id="">
+                  <input type="search" name="j-search" id="" placeholder="Search">
                </div>
                <div class="j-category">
                   <h4>Category</h4>
                   <ul class="j-cat-items">
-                     <li class="active"><span class="color"></span>Work</li>
+                     <li class="active"><span class="color"></span>All</li>
+                     <li><span class="color"></span>Work</li>
                      <li><span class="color"></span>Events</li>
                      <li><span class="color"></span>Personal</li>
                      <li><span class="color"></span>Trips</li>
@@ -56,20 +56,179 @@
                <div class="j-calender"></div>
             </div>
             <div class="col-lg-3 j-log-bar">
-               <div class="j-sort">
-                  <ul>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                     <li></li>
+
+               <!-- <div class="j-sort">
+                  <ul class="year">
+                     <li>2019</li>
+                     <li>2018</li>
+                     <li>2017</li>
+                     <li>2016</li>
+                     <i class="fas fa-chevron-down"></i>
                   </ul>
-                  <i class="fas fa-arrow-down"></i>
+                  <ul class="month">
+                     <li>January</li>
+                     <li>February</li>
+                     <li>March</li>
+                     <li>Aprli</li>
+                     <li>May</li>
+                     <li>June</li>
+                     <li>July</li>
+                     <li>August</li>
+                     <li>September</li>
+                     <li>October</li>
+                     <li>November</li>
+                     <li>December</li>
+                     <i class="fas fa-chevron-down"></i>
+                  </ul>
+               </div> -->
+
+
+               <div class="j-sort d-flex justify-content-between">
+                  <div class="select_mate" data-mate-select="active">
+                     <select name="" onchange="" onclick="return false;" id="">
+                        <option value="">2019</option>
+                        <option value="1">2018</option>
+                        <option value="2">2017</option>
+                        <option value="3">2016</option>
+                        <option value="4">2015</option>
+                        <option value="5">2014</option>
+                     </select>
+                     <p class="selecionado_opcion" onclick="open_select(this)"></p>
+                     <span onclick="open_select(this)" class="icon_select_mate"><svg fill="#8A9CB2" height="24"
+                           viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                           <path d="M0-.75h24v24H0z" fill="none" />
+                        </svg>
+                     </span>
+                     <div class="cont_list_select_mate">
+                        <ul class="cont_select_int"> </ul>
+                     </div>
+                  </div>
+
+                  <div class="select_mate" data-mate-select="active">
+                     <select name="" onchange="" onclick="return false;" id="">
+                        <option value="">April</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">Aprli</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                     </select>
+                     <p class="selecionado_opcion" onclick="open_select(this)"></p>
+                     <span onclick="open_select(this)" class="icon_select_mate"><svg fill="#8A9CB2" height="24"
+                           viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                           <path d="M0-.75h24v24H0z" fill="none" />
+                        </svg>
+                     </span>
+                     <div class="cont_list_select_mate">
+                        <ul class="cont_select_int"> </ul>
+                     </div>
+                  </div>
+
                </div>
                <div class="j-logs">
+                  <div class="month-year">
+                     <span class="month">April</span>
+                     <span class="year">2017</span>
+                  </div>
                   <div class="single-log">
                      <div class="log-date">
-                        <span class="date"></span>
-                        <span class="day"></span>
+                        <span class="date">24</span>
+                        <span class="day">Monday</span>
+                     </div>
+                     <div class="log-prev">
+                        <h5>Lorem ipsum dolor sit amet. consectetur</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id aliquam dolorem laborum
+                           repudiandae, maxime, velit minus quos distinctio ad ipsa sunt eius, error assumenda eos
+                           inventore aspernatur. Fugiat, magnam neque.</p>
+                     </div>
+                     <div class="circle-mark">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                     </div>
+                  </div>
+                  <div class="single-log active">
+                     <div class="log-date">
+                        <span class="date">24</span>
+                        <span class="day">Monday</span>
+                     </div>
+                     <div class="log-prev">
+                        <h5>Lorem ipsum dolor sit amet. consectetur</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id aliquam dolorem laborum
+                           repudiandae, maxime, velit minus quos distinctio ad ipsa sunt eius, error assumenda eos
+                           inventore aspernatur. Fugiat, magnam neque.</p>
+                     </div>
+                     <div class="circle-mark"></div>
+                  </div>
+                  <div class="single-log">
+                     <div class="log-date">
+                        <span class="date">16</span>
+                        <span class="day">Saturday</span>
+                     </div>
+                     <div class="log-prev">
+                        <h5>Lorem ipsum dolor sit amet.</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id aliquam dolorem laborum
+                           repudiandae, maxime, velit minus quos distinctio ad ipsa sunt eius, error assumenda eos
+                           inventore aspernatur. Fugiat, magnam neque.</p>
+                     </div>
+                     <div class="circle-mark"></div>
+                  </div>
+                  <div class="single-log">
+                     <div class="log-date">
+                        <span class="date">16</span>
+                        <span class="day">Saturday</span>
+                     </div>
+                     <div class="log-prev">
+                        <h5>Lorem ipsum dolor sit amet.</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id aliquam dolorem laborum
+                           repudiandae, maxime, velit minus quos distinctio ad ipsa sunt eius, error assumenda eos
+                           inventore aspernatur. Fugiat, magnam neque.</p>
+                     </div>
+                     <div class="circle-mark"></div>
+                  </div>
+                  <div class="single-log">
+                     <div class="log-date">
+                        <span class="date">16</span>
+                        <span class="day">Saturday</span>
+                     </div>
+                     <div class="log-prev">
+                        <h5>Lorem ipsum dolor sit amet.</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id aliquam dolorem laborum
+                           repudiandae, maxime, velit minus quos distinctio ad ipsa sunt eius, error assumenda eos
+                           inventore aspernatur. Fugiat, magnam neque.</p>
+                     </div>
+                     <div class="circle-mark"></div>
+                  </div>
+                  <div class="single-log">
+                     <div class="log-date">
+                        <span class="date">16</span>
+                        <span class="day">Saturday</span>
+                     </div>
+                     <div class="log-prev">
+                        <h5>Lorem ipsum dolor sit amet.</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id aliquam dolorem laborum
+                           repudiandae, maxime, velit minus quos distinctio ad ipsa sunt eius, error assumenda eos
+                           inventore aspernatur. Fugiat, magnam neque.</p>
+                     </div>
+                     <div class="circle-mark"></div>
+                  </div>
+                  <div class="single-log">
+                     <div class="log-date">
+                        <span class="date">16</span>
+                        <span class="day">Saturday</span>
                      </div>
                      <div class="log-prev">
                         <h5>Lorem ipsum dolor sit amet.</h5>
@@ -81,30 +240,95 @@
                   </div>
                </div>
             </div>
-            <div class="col-lg-7 j-creator">
+            <!-- <div class="col-lg-7 j-creator">
                <div class="top-bar">
                   <div class="next-prev">
                      <i class="fas fa-chevron-left"></i>
                      <i class="fas fa-chevron-right"></i>
                   </div>
                   <div class="attachment">
+                     <i class="fas fa-file-alt"></i>
+                     <i class="fas fa-edit"></i>
+                     <i class="fas fa-trash"></i>
+                     <i class="fas fa-plus add"></i>
+                  </div>
+               </div>
+
+               <div class="journal-read">
+                  <div class="j-created-date"> <span>Monday, April 5, 2017</span> </div>
+                  <div class="j-write">
+                     <div class="heading">
+                        <h2>Lorem ipsum dolor sit amet.</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint laudantium reiciendis quae
+                           commodi molestias iste cum atque consequuntur aspernatur totam? Ipsum eaque aspernatur
+                           sapiente
+                           voluptates, sunt nemo fuga aperiam mollitia ratione laborum similique non eligendi nam
+                           repudiandae adipisci neque sed dolorem eius deserunt quis unde aliquam! Ratione odit harum
+                           unde?
+                        </p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint laudantium reiciendis quae
+                           commodi molestias aspernatur sapiente voluptates, sunt nemo fuga aperiam mollitia ratione
+                           laborum similique non eligendi nam repudiandae adipisci neque sed dolorem eius deserunt quis
+                           unde aliquam! Ratione odit harum unde?
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>  -->
+            <div class="col-lg-7 j-creator j-editor">
+               <div class="top-bar  write-mood">
+                  <div class="header-text">
+                     <input type="text" name="" id="" placeholder="Write Journal Heading Here">
+                  </div>
+                  <div class="attachment">
                      <i class="fas fa-microphone"></i>
                      <i class="fas fa-image"></i>
                      <i class="fas fa-tag"></i>
+                     <i class="fas fa-undo"></i>
+                     <i class="fas fa-redo"></i>
                      <i class="fas fa-trash"></i>
-                     <i class="fas fa-plug"></i>
+                     <i class="fas fa-save add"></i>
                   </div>
                </div>
                <div class="text-edit-bar">
-                  <input type="number">
-                  <div class="heading-style">
-                     <i class="fas fa-heading">1</i>
-                     <i class="fas fa-heading">2</i>
-                     <i class="fas fa-heading">3</i>
-                     <i class="fas fa-heading">4</i>
+                  <div class="number-input">
+                     <input class="quantity" min="8" max="72" name="quantity" value="16" type="number">
+                     <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i class="fas fa-chevron-up"></i></button>
+                     <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="plus"><i class="fas fa-chevron-down"></i></button>
                   </div>
-                  <div class="font-style">
-                     <i class="fas fa-bold"></i>
+                  <div class="select_mate" data-mate-select="active">
+                     <select name="" onchange="" onclick="return false;" id="">
+                        <option value="">Quicksand</option>
+                        <option value="1">Roboto Slab</option>
+                        <option value="2">Roboto</option>
+                        <option value="3">Fira Sans</option>
+                        <option value="4">Open Sans</option>
+                        <option value="5">Source Sans Pro</option>
+                        <option value="6">PT Sans</option>
+                        <option value="7">Lato</option>
+                        <option value="8">Montserrat</option>
+                        <option value="9">Varela Round</option>
+                        <option value="10">Pacifico</option>
+                        <option value="11">Oswald</option>
+                        <option value="12">Raleway</option>
+                        <option value="13">Bree Serif</option>
+                        <option value="14">Cookie</option>
+                        <option value="15">Quicksand</option>
+                     </select>
+                     <p class="selecionado_opcion" onclick="open_select(this)"></p>
+                     <span onclick="open_select(this)" class="icon_select_mate"><svg fill="#8A9CB2" height="24"
+                           viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                           <path d="M0-.75h24v24H0z" fill="none" />
+                        </svg>
+                     </span>
+                     <div class="cont_list_select_mate">
+                        <ul class="cont_select_int"> </ul>
+                     </div>
+                  </div>
+                  <div class="icons">
+                <div class="font-style">
+                     <i class="fas fa-bold active"></i>
                      <i class="fas fa-italic"></i>
                      <i class="fas fa-underline"></i>
                      <i class="fas fa-strikethrough"></i>
@@ -116,47 +340,32 @@
                   </div>
 
                   <div class="list-style">
-                     <i class="fas fa-list"></i>
-                     <i class="fas fa-ol"></i>
+                     <i class="fas fa-list-ul"></i>
+                     <i class="fas fa-list-ol"></i>
                   </div>
                   <div class="text-style">
                      <i class="fas fa-highlighter"></i>
-                     <i class="fas fa-paint-roller"></i>
                      <i class="fas fa-tenge"></i>
                   </div>
                   <div class="special-style">
                      <i class="fas fa-quote-left"></i>
-                     <i class="fas fa-code"></i>
-                     <i class="fas fa-tenge"></i>
                   </div>
                </div>
-               <div class="j-create-date"> <span>Monday, April 5, 2017</span> </div>
-               <div class="j-write">
-                  <div class="heading">
-                     <h2>Lorem ipsum dolor sit amet.</h2>
-                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint laudantium reiciendis quae
-                        commodi molestias iste cum atque consequuntur aspernatur totam? Ipsum eaque aspernatur sapiente
-                        voluptates, sunt nemo fuga aperiam mollitia ratione laborum similique non eligendi nam
-                        repudiandae adipisci neque sed dolorem eius deserunt quis unde aliquam! Ratione odit harum unde?
-                     </p>
-                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint laudantium reiciendis quae
-                        commodi molestias aspernatur sapiente voluptates, sunt nemo fuga aperiam mollitia ratione
-                        laborum similique non eligendi nam repudiandae adipisci neque sed dolorem eius deserunt quis
-                        unde aliquam! Ratione odit harum unde?
-                     </p>
-                  </div>
+               </div>
+               <div class="journal-write">
+                  <iframe src="" name="journalTextEditor" frameborder="0"></iframe>
                </div>
             </div>
          </div>
       </div>
    </div>
-   </div>
-   </div>
-   </div>
+<style>
 
 
 
+</style>
 
+   <script src="assets/js/other.js"></script>
    <script src="assets/js/scripts.js"></script>
 </body>
 
