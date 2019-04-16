@@ -13,6 +13,11 @@
    <!-- Site Title-->
    <title>Notes & To-Do</title>
 
+   <!-- FONTS -->
+   <link
+      href="https://fonts.googleapis.com/css?family=Bree+Serif|Cookie|Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700|PT+Sans:400,400i,700,700i|Pacifico|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i|Varela+Round|Quicksand:300,400,500,700"
+      rel="stylesheet">
+
    <!-- CSS -->
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -84,55 +89,30 @@
 
 
                <div class="j-sort d-flex justify-content-between">
-                  <div class="select_mate" data-mate-select="active">
-                     <select name="" onchange="" onclick="return false;" id="">
-                        <option value="">2019</option>
-                        <option value="1">2018</option>
-                        <option value="2">2017</option>
-                        <option value="3">2016</option>
-                        <option value="4">2015</option>
-                        <option value="5">2014</option>
-                     </select>
-                     <p class="selecionado_opcion" onclick="open_select(this)"></p>
-                     <span onclick="open_select(this)" class="icon_select_mate"><svg fill="#8A9CB2" height="24"
-                           viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
-                           <path d="M0-.75h24v24H0z" fill="none" />
-                        </svg>
-                     </span>
-                     <div class="cont_list_select_mate">
-                        <ul class="cont_select_int"> </ul>
-                     </div>
-                  </div>
 
-                  <div class="select_mate" data-mate-select="active">
-                     <select name="" onchange="" onclick="return false;" id="">
-                        <option value="">April</option>
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                        <option value="4">Aprli</option>
-                        <option value="5">May</option>
-                        <option value="6">June</option>
-                        <option value="7">July</option>
-                        <option value="8">August</option>
-                        <option value="9">September</option>
-                        <option value="10">October</option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
-                     </select>
-                     <p class="selecionado_opcion" onclick="open_select(this)"></p>
-                     <span onclick="open_select(this)" class="icon_select_mate"><svg fill="#8A9CB2" height="24"
-                           viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
-                           <path d="M0-.75h24v24H0z" fill="none" />
-                        </svg>
-                     </span>
-                     <div class="cont_list_select_mate">
-                        <ul class="cont_select_int"> </ul>
-                     </div>
-                  </div>
-
+                  <select name="">
+                     <option value="">2019</option>
+                     <option value="1">2018</option>
+                     <option value="2">2017</option>
+                     <option value="3">2016</option>
+                     <option value="4">2015</option>
+                     <option value="5">2014</option>
+                  </select>
+                  <select name="">
+                     <option value="">April</option>
+                     <option value="1">January</option>
+                     <option value="2">February</option>
+                     <option value="3">March</option>
+                     <option value="4">Aprli</option>
+                     <option value="5">May</option>
+                     <option value="6">June</option>
+                     <option value="7">July</option>
+                     <option value="8">August</option>
+                     <option value="9">September</option>
+                     <option value="10">October</option>
+                     <option value="11">November</option>
+                     <option value="12">December</option>
+                  </select>
                </div>
                <div class="j-logs">
                   <div class="month-year">
@@ -146,7 +126,8 @@
                      </div>
                      <div class="log-prev">
                         <h5>Lorem ipsum dolor sit amet. consectetur</h5>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id aliquam dolorem laborum
+                        <p class="test-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id aliquam
+                           dolorem laborum
                            repudiandae, maxime, velit minus quos distinctio ad ipsa sunt eius, error assumenda eos
                            inventore aspernatur. Fugiat, magnam neque.</p>
                      </div>
@@ -287,83 +268,76 @@
                      <i class="fas fa-undo"></i>
                      <i class="fas fa-redo"></i>
                      <i class="fas fa-trash"></i>
-                     <i class="fas fa-save add"></i>
+                     <i class="fas fa-save"></i>
                   </div>
                </div>
                <div class="text-edit-bar">
                   <div class="number-input">
                      <input class="quantity" min="8" max="72" name="quantity" value="16" type="number">
-                     <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i class="fas fa-chevron-up"></i></button>
-                     <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="plus"><i class="fas fa-chevron-down"></i></button>
+                     <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i
+                           class="fas fa-chevron-up"></i></button>
+                     <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="plus"><i
+                           class="fas fa-chevron-down"></i></button>
                   </div>
-                  <div class="select_mate" data-mate-select="active">
-                     <select name="" onchange="" onclick="return false;" id="">
-                        <option value="">Quicksand</option>
-                        <option value="1">Roboto Slab</option>
-                        <option value="2">Roboto</option>
-                        <option value="3">Fira Sans</option>
-                        <option value="4">Open Sans</option>
-                        <option value="5">Source Sans Pro</option>
-                        <option value="6">PT Sans</option>
-                        <option value="7">Lato</option>
-                        <option value="8">Montserrat</option>
-                        <option value="9">Varela Round</option>
-                        <option value="10">Pacifico</option>
-                        <option value="11">Oswald</option>
-                        <option value="12">Raleway</option>
-                        <option value="13">Bree Serif</option>
-                        <option value="14">Cookie</option>
-                        <option value="15">Quicksand</option>
-                     </select>
-                     <p class="selecionado_opcion" onclick="open_select(this)"></p>
-                     <span onclick="open_select(this)" class="icon_select_mate"><svg fill="#8A9CB2" height="24"
-                           viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
-                           <path d="M0-.75h24v24H0z" fill="none" />
-                        </svg>
-                     </span>
-                     <div class="cont_list_select_mate">
-                        <ul class="cont_select_int"> </ul>
+                  <select name="" class="font-select">
+                     <option value="Roboto Slab">Roboto Slab</option>
+                     <option value="Roboto">Roboto</option>
+                     <option value="Fira Sans">Fira Sans</option>
+                     <option value="Open Sans">Open Sans</option>
+                     <option value="Source Sans Pro">Source Sans Pro</option>
+                     <option value="PT Sans">PT Sans</option>
+                     <option value="Lato">Lato</option>
+                     <option value="Montserrat">Montserrat</option>
+                     <option value="Varela Round">Varela Round</option>
+                     <option value="Pacifico">Pacifico</option>
+                     <option value="Oswald">Oswald</option>
+                     <option value="Raleway">Raleway</option>
+                     <option value="Bree Serif">Bree Serif</option>
+                     <option value="Cookie">Cookie</option>
+                     <option value="Quicksand">Quicksand</option>
+                  </select>
+                  <div class="icons">
+                     <div class="font-style">
+                        <i class="fas fa-bold active"></i>
+                        <i class="fas fa-italic"></i>
+                        <i class="fas fa-underline"></i>
+                        <i class="fas fa-strikethrough"></i>
+                     </div>
+                     <div class="line-style">
+                        <i class="fas fa-align-left"></i>
+                        <i class="fas fa-align-center"></i>
+                        <i class="fas fa-align-right"></i>
+                     </div>
+
+                     <div class="list-style">
+                        <i class="fas fa-list-ul"></i>
+                        <i class="fas fa-list-ol"></i>
+                     </div>
+                     <div class="text-style">
+                        <i class="fas fa-highlighter"></i>
+                        <i class="fas fa-tenge"></i>
+                     </div>
+                     <div class="special-style">
+                        <i class="fas fa-quote-left"></i>
                      </div>
                   </div>
-                  <div class="icons">
-                <div class="font-style">
-                     <i class="fas fa-bold active"></i>
-                     <i class="fas fa-italic"></i>
-                     <i class="fas fa-underline"></i>
-                     <i class="fas fa-strikethrough"></i>
-                  </div>
-                  <div class="line-style">
-                     <i class="fas fa-align-left"></i>
-                     <i class="fas fa-align-center"></i>
-                     <i class="fas fa-align-right"></i>
-                  </div>
-
-                  <div class="list-style">
-                     <i class="fas fa-list-ul"></i>
-                     <i class="fas fa-list-ol"></i>
-                  </div>
-                  <div class="text-style">
-                     <i class="fas fa-highlighter"></i>
-                     <i class="fas fa-tenge"></i>
-                  </div>
-                  <div class="special-style">
-                     <i class="fas fa-quote-left"></i>
-                  </div>
-               </div>
                </div>
                <div class="journal-write">
-                  <iframe src="" name="journalTextEditor" frameborder="0"></iframe>
+                  <!-- <textarea name="journalTextEditor" id="" cols="30" rows="10"></textarea> -->
+                  <iframe name="journalTextEditor" class="asdasds"></iframe>
                </div>
             </div>
          </div>
       </div>
    </div>
-<style>
-
-
-
-</style>
+   <style>
+      iframe,
+      iframe * {
+         height: 500px;
+         width: 100%;
+         font-family: "Quicksand", sans-serif !important;
+      }
+   </style>
 
    <script src="assets/js/other.js"></script>
    <script src="assets/js/scripts.js"></script>

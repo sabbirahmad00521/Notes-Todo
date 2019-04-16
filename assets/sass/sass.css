@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Cookie|Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700|PT+Sans:400,400i,700,700i|Pacifico|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i|Varela+Round|Quicksand:300,400,500,700");
 body {
   font-family: "Quicksand", sans-serif;
   font-size: 1em;
@@ -239,35 +238,26 @@ button:focus {
   border-bottom: 1px solid #DCE0EC;
 }
 
-#journals .j-log-bar .j-sort .select_mate {
+#journals .j-log-bar .j-sort select {
   font-family: "Varela Round", sans-serif;
   font-size: 0.9em;
   color: #8A9CB2;
   font-weight: 500;
   line-height: 1.5;
+  width: 40%;
+  padding: 5px;
 }
 
-#journals .j-log-bar .j-sort .select_mate:first-nth {
-  border-right: 1px solid #DCE0EC;
+#journals .j-log-bar .j-sort select:first-nth {
+  border-right: 1px solid red;
 }
 
-#journals .j-log-bar .j-sort .select_mate p {
+#journals .j-log-bar .j-sort select option {
   font-family: "Varela Round", sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
   color: #8A9CB2;
   font-weight: 500;
   line-height: 1.5;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#journals .j-log-bar .j-sort .select_mate .icon_select_mate {
-  top: 12px;
 }
 
 #journals .j-log-bar .j-logs {
@@ -576,28 +566,25 @@ button:focus {
   line-height: 22px;
 }
 
-#journals .j-editor .text-edit-bar .select_mate {
-  float: none;
-  width: 20%;
-}
-
-#journals .j-editor .text-edit-bar .select_mate li {
-  font-family: "Quicksand", sans-serif;
-  font-size: 0.75em;
-  color: #8A9CB2;
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-#journals .j-editor .text-edit-bar .select_mate p {
-  font-family: "Quicksand", sans-serif;
+#journals .j-editor select {
+  font-family: "Varela Round", sans-serif;
   font-size: 0.9em;
   color: #8A9CB2;
   font-weight: 500;
   line-height: 1.5;
+  width: auto;
+  padding: 5px;
 }
 
-#journals .j-editor .text-edit-bar .select_mate .icon_select_mate {
-  top: 9px;
+#journals .j-editor select:first-nth {
+  border-right: 1px solid red;
+}
+
+#journals .j-editor select option {
+  font-family: "Varela Round", sans-serif;
+  font-size: 1em;
+  color: #8A9CB2;
+  font-weight: 500;
+  line-height: 1.5;
 }
 /*# sourceMappingURL=sass.css.map */

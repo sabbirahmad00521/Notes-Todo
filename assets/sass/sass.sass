@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Cookie|Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700|PT+Sans:400,400i,700,700i|Pacifico|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i|Varela+Round|Quicksand:300,400,500,700');
-    
+
 //COLORS
 $bg: #f4f4f4 // background color
 $ntc: #545A70 // normal text color
@@ -231,18 +230,14 @@ button:focus
         .j-sort
             height: 50px
             border-bottom: 1px solid $bdc
-            .select_mate
+            select
                 +font($f0, $fac, $ff9, 500)
+                width: 40%
+                padding: 5px
                 &:first-nth
-                    border-right: 1px solid $bdc
-                p
-                    +font($f0, $fac, $ff9, 500)
-                    height: 100%
-                    display: flex
-                    align-items: center
-                .icon_select_mate
-                    top: 12px 
-
+                    border-right: 1px solid red
+                option
+                    +font($f1, $fac, $ff9, 500)
         .j-logs
             overflow-y: scroll
             height: 75% 
@@ -436,12 +431,12 @@ button:focus
                         font-size: 12px
                         display: block
                         line-height: 22px
-            .select_mate
-                float: none
-                width: 20%
-                li 
-                    +font($fsm, $fac)
-                p
-                    +font($f0, $fac)
-                .icon_select_mate
-                    top: 9px 
+
+        select
+            +font($f0, $fac, $ff9, 500)
+            width: auto
+            padding: 5px
+            &:first-nth
+                border-right: 1px solid red
+            option
+                +font($f1, $fac, $ff9, 500)
