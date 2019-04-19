@@ -25,6 +25,7 @@
    <link rel='stylesheet' href='assets/css/bootstrap.min.css' />
    <link rel="stylesheet" href="assets/sass/sass.css">
    <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/journal.style.css">
    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
 
 </head>
@@ -61,35 +62,7 @@
                <div class="j-calender"></div>
             </div>
             <div class="col-lg-3 j-log-bar">
-
-               <!-- <div class="j-sort">
-                  <ul class="year">
-                     <li>2019</li>
-                     <li>2018</li>
-                     <li>2017</li>
-                     <li>2016</li>
-                     <i class="fas fa-chevron-down"></i>
-                  </ul>
-                  <ul class="month">
-                     <li>January</li>
-                     <li>February</li>
-                     <li>March</li>
-                     <li>Aprli</li>
-                     <li>May</li>
-                     <li>June</li>
-                     <li>July</li>
-                     <li>August</li>
-                     <li>September</li>
-                     <li>October</li>
-                     <li>November</li>
-                     <li>December</li>
-                     <i class="fas fa-chevron-down"></i>
-                  </ul>
-               </div> -->
-
-
                <div class="j-sort d-flex justify-content-between">
-
                   <select name="">
                      <option value="">2019</option>
                      <option value="1">2018</option>
@@ -262,6 +235,7 @@
                      <input type="text" name="" id="" placeholder="Write Journal Heading Here">
                   </div>
                   <div class="attachment">
+                     <i class="fas fa-file-alt"></i>
                      <i class="fas fa-microphone"></i>
                      <i class="fas fa-image"></i>
                      <i class="fas fa-tag"></i>
@@ -273,13 +247,44 @@
                </div>
                <div class="text-edit-bar">
                   <div class="number-input">
-                     <input class="quantity" min="8" max="72" name="quantity" value="16" type="number">
-                     <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i
+                     <input class="quantity" min="1" max="100" name="quantity" value="14" type="number">
+                     <button class="increase" onclick="this.parentNode.querySelector('.quantity').stepUp()"><i
                            class="fas fa-chevron-up"></i></button>
-                     <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="plus"><i
-                           class="fas fa-chevron-down"></i></button>
+                     <button class="decrease" onclick="this.parentNode.querySelector('.quantity').stepDown()"
+                        class="plus"><i class="fas fa-chevron-down"></i></button>
                   </div>
                   <select name="" class="font-select">
+                     <option value="">Select Font</option>
+                     <option value="Bree Serif">Bree Serif</option>
+                     <option value="Comfortaa">Comfortaa</option>
+                     <option value="Dancing Script">Dancing Script</option>
+                     <option value="Dosis">Dosis</option>
+                     <option value="Fira Sans">Fira Sans</option>
+                     <option value="Handlee">Handlee</option>
+                     <option value="Indie Flower">Indie Flower</option>
+                     <option value="Kalam">Kalam</option>
+                     <option value="Lato">Lato</option>
+                     <option value="Lobster Two">Lobster Two</option>
+                     <option value="Merienda">Merienda</option>
+                     <option value="Montserrat">Montserrat</option>
+                     <option value="Noticia Text">Noticia Text</option>
+                     <option value="Nunito">Nunito</option>
+                     <option value="Open Sans">Open Sans</option>
+                     <option value="Oswald">Oswald</option>
+                     <option value="PT Sans">PT Sans</option>
+                     <option value="Pacifico">Pacifico</option>
+                     <option value="Patua One">Patua One</option>
+                     <option value="Poiret One">Poiret One</option>
+                     <option value="Quicksand">Quicksand</option>
+                     <option value="Raleway">Raleway</option>
+                     <option value="Righteous">Righteous</option>
+                     <option value="Roboto">Roboto</option>
+                     <option value="Roboto Slab">Roboto Slab</option>
+                     <option value="Source Sans Pro">Source Sans Pro</option>
+                     <option value="Varela Round">Varela Round</option>
+                     <option value="Vollkorn">Vollkorn</option>
+                  </select>
+                  <!-- <select name="" class="font-select">
                      <option value="Roboto Slab">Roboto Slab</option>
                      <option value="Roboto">Roboto</option>
                      <option value="Fira Sans">Fira Sans</option>
@@ -295,7 +300,7 @@
                      <option value="Bree Serif">Bree Serif</option>
                      <option value="Cookie">Cookie</option>
                      <option value="Quicksand">Quicksand</option>
-                  </select>
+                  </select> -->
                   <div class="icons">
                      <div class="font-style">
                         <i class="fas fa-bold active"></i>
@@ -314,8 +319,8 @@
                         <i class="fas fa-list-ol"></i>
                      </div>
                      <div class="text-style">
-                        <i class="fas fa-highlighter"></i>
-                        <i class="fas fa-tenge"></i>
+                        <i class="fas fa-highlighter"><input type="color" value="#00ff00"></i>
+                        <i class="fas fa-tenge"><input type="color" value="#ff0000"></i>
                      </div>
                      <div class="special-style">
                         <i class="fas fa-quote-left"></i>
@@ -324,18 +329,38 @@
                </div>
                <div class="journal-write">
                   <!-- <textarea name="journalTextEditor" id="" cols="30" rows="10"></textarea> -->
-                  <iframe name="journalTextEditor" class="asdasds"></iframe>
+                  <iframe
+                     srcdoc='<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Comfortaa|Dancing+Script|Dosis|Fira+Sans|Handlee|Indie+Flower|Kalam|Lato|Lobster+Two|Merienda|Montserrat|Noticia+Text|Nunito|Open+Sans|Oswald|PT+Sans|Pacifico|Patua+One|Poiret+One|Quicksand|Raleway|Righteous|Roboto|Roboto+Slab|Source+Sans+Pro|Varela+Round|Vollkorn" rel="stylesheet"> <link rel="stylesheet" href="assets/css/journal.style.css">'
+                     name="journalTextEditor" class="asdasds"></iframe>
+
                </div>
             </div>
          </div>
       </div>
    </div>
    <style>
-      iframe,
-      iframe * {
+      iframe {
          height: 500px;
          width: 100%;
-         font-family: "Quicksand", sans-serif !important;
+      }
+
+      iframe body,
+      iframe html {
+         font-size: 14px !important;
+      }
+
+      .text-style i {
+         position: relative;
+      }
+
+      .text-style input {
+         position: absolute;
+         left: 0;
+         top: 0;
+         height: 100%;
+         width: 100%;
+         opacity: 0;
+         cursor: pointer;
       }
    </style>
 
